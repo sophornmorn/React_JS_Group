@@ -43,9 +43,9 @@ export default function Footer() {
                     </Grid>
                 </Grid>
 
-                <Toolbar style={{ justifyContent: "center" }}>
+                {/* <Toolbar style={{ justifyContent: "center" }}>
                     <Typography variant="caption">©2020</Typography>
-                </Toolbar>
+                </Toolbar> */}
             </AppBar>
         </div>
     )
