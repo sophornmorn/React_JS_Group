@@ -5,9 +5,7 @@ import Menu from '@material-ui/core/Menu';
 import Box from '@material-ui/core/Box';
 import MenuItem from '@material-ui/core/MenuItem';
 import { makeStyles } from '@material-ui/core/styles';
-// import { useHistory } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import { PATH_APP } from '../../src/path';
 
 
 
@@ -27,10 +25,9 @@ export default function Header() {
 const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
-  const history = useNavigate();
-  const onDetail = rowId => {
-    history.push(`${PATH_APP.invoice.invoice.detail}/${rowId}`, {
-    });
+  const navigate = useNavigate();
+  const onDetail = () => {
+    navigate("https://www.google.com");
   };
   
   const handleClick = (event) => {
@@ -42,9 +39,6 @@ const classes = useStyles();
   const handleClose = () => {
     setAnchorEl(null);
   };
-//   const handlOpen =() => {
-//       setOpen(true);
-//   }
 
   return (
     <>
