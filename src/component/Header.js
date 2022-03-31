@@ -26,8 +26,14 @@ const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
-  const onDetail = () => {
-    navigate("https://www.google.com");
+  const onComputer = () => {
+    navigate("/computer");
+  };
+  const onWatch = () => {
+    navigate("/watch");
+  };
+  const onPhone = () => {
+    navigate("/phone");
   };
   
   const handleClick = (event) => {
@@ -47,11 +53,7 @@ const classes = useStyles();
       >
         HOME
       </Link>
-      <Link href="/about" aria-controls="simple-menu" aria-haspopup="true" className={classes.buttonItem} 
-      >
-        ABOUT US
-      </Link>
-      <Link href="" aria-controls="simple-menu" aria-haspopup="true" className={classes.buttonItem} 
+      <Link href="/contact" aria-controls="simple-menu" aria-haspopup="true" className={classes.buttonItem} 
       >
         CONTACT US
       </Link>
@@ -67,9 +69,9 @@ const classes = useStyles();
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={onDetail}>Computer</MenuItem>
-        <MenuItem onClick={handleClose}>Phone</MenuItem>
-        <MenuItem onClick={handleClose}>Watch</MenuItem>
+        <MenuItem onClick={onComputer}>Computer</MenuItem>
+        <MenuItem onClick={onPhone}>Phone</MenuItem>
+        <MenuItem onClick={onWatch}>Watch</MenuItem>
       </Menu>
     </Box>
     </>
